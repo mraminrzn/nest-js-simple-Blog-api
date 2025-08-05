@@ -1,12 +1,20 @@
-import { Prop } from "@nestjs/mongoose";
-import { Document  } from "mongoose";
+import { Prop, SchemaFactory } from '@nestjs/mongoose';
+import { Document, Types } from 'mongoose';
+import { BlogCategory } from './BlogCategory';
 
-export class BlogSchema extends Document{
-    @Prop()
-    title: string;
+export class Blog extends Document {
+  @Prop()
+  title: string;
 
-    @Prop()
-    content: string
+  @Prop()
+  content: string;
 
-    @Category()
+  @Prop({
+    ref: BlogCategory.name,
+    type: Types.ObjectId,
+    required: true,
+  })
+  category: Types.ObjectId;
 }
+
+export const BlogSchema = SchemaFactory.createForClass(Blog);
