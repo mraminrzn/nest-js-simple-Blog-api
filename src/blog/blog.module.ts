@@ -6,6 +6,7 @@ import { Blog, BlogSchema } from './schemas/blog.schema';
 import { BlogCategory, BlogCategorySchema } from './schemas/BlogCategory';
 import { BlogCategoryController } from './controllers/blogCategory.controller';
 import { BlogCategoryService } from './services/blogCategory.service';
+import { ConfigModule } from '@nestjs/config';
 
 @Module({
   controllers: [BlogController, BlogCategoryController],
@@ -17,4 +18,6 @@ import { BlogCategoryService } from './services/blogCategory.service';
     ]),
   ],
 })
-export class BlogModule {}
+export class BlogModule {
+  
+}
