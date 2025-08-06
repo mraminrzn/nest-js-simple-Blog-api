@@ -26,16 +26,16 @@ It includes full CRUD operations and relations between blog and category entitie
 git clone https://github.com/mraminrzn/nest-js-simple-Blog-api
 cd nest-js-simple-Blog-api
 ```
-###2. Install Dependencies
+### 2. Install Dependencies
 ```bash
 npm install
 ```
-###3. Set Up Environment Variables
+### 3. Set Up Environment Variables
 Create a **.env** file in the root of your project and define the database URL:
 ```bash
 DATABASE_URL=mongodb://localhost:27017/blogdb
 ```
-###4. Run the Development Server
+### 4. Run the Development Server
 ```bash
 npm run start:dev
 ```
@@ -58,20 +58,20 @@ src/
 
 ```
 ---
-##📄 API Documentation
+## 📄 API Documentation
 Swagger is available at:
 ```bash
 http://localhost:3000/api
 ```
 ---
-##❗ Notes
+## ❗ Notes
 -The blog schema references the category schema using ObjectId
 -Data will not be saved if a provided category ID doesn't exist in the category collection
 -A valid 24-character MongoDB ObjectId is required for related resources
 -Use .env to configure database settings
 
 ---
-##🙌 Contribution
+## 🙌 Contribution
 Feel free to open issues or submit pull requests if you'd like to contribute!
 ---
 Made with ❤️ using NestJS
